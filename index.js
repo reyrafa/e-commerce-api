@@ -30,14 +30,14 @@ db.once("open", () => {
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cors());
-app.use("/b3/users", userRoutes);
-app.use("/b3/categories", categoryRoutes);
-app.use("/b3/products", productRoutes);
-app.use("/b3/orders", orderRoutes);
-app.use("/b3/orderStatus", orderStatusRoutes);
-app.use("/b3/paymentMethods", paymentMethodRoutes);
-app.use("/b3/paymentStatus", paymentStatusRoutes);
-app.use("/b3/payments", paymentRoutes);
+app.use("/users", userRoutes);
+app.use("/categories", categoryRoutes);
+app.use("/products", productRoutes);
+app.use("/orders", orderRoutes);
+app.use("/orderStatus", orderStatusRoutes);
+app.use("/paymentMethods", paymentMethodRoutes);
+app.use("/paymentStatus", paymentStatusRoutes);
+app.use("/payments", paymentRoutes);
 
 app.listen(port, () => {
     console.log(`Server is running at port: ${port}`);
