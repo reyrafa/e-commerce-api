@@ -1,0 +1,1302 @@
+{
+	"info": {
+		"_postman_id": "e56cbb66-b713-4376-8a4d-a34252942798",
+		"name": "capstone2-Request",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "14941007"
+	},
+	"item": [
+		{
+			"name": "Products-Request",
+			"item": [
+				{
+					"name": "POST: \"add product\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0NTAzNzM1fQ.DKBEin-cxXBsP8qi4RCWqzAgl8pj3wqxqHVOPiWiRdk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Vn 2s Wireless Mouse\",\r\n    \"description\": \"Wireless Mouse\",\r\n    \"model\": \"WM-301\",\r\n    \"color\": \"white\",\r\n    \"price\": 500,\r\n    \"stocks\": 10,\r\n    \"images\": [\"https://www.pngplay.com/wp-content/uploads/2/Computer-Mouse-Transparent-PNG.png\"],\r\n    \"categoryID\": \"6583e4c04543678a9c6e58d8\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/add-product",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"add-product"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch products list\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjk0MTQ2fQ.9MwEtUvidEQP_nC7KIJYs_sFKINvSiPtPMfLrvCoW60",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/products-list",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"products-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch active products\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/active-products",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"active-products"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch a product\"",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/fetch-product/6598ab706ee5b3ccf66ac88e",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"fetch-product",
+								"6598ab706ee5b3ccf66ac88e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update a product\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0Njc3OTU0fQ.OrhQIrhgiq2taS7_xZRk8Xjew2f7XB7xzcPEJQ5adqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"vn 2s wireless mouse\",\r\n    \"description\": \"Wireless Mouse\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/update-product/6598b8ca9b844ba2abd0f6b3",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"update-product",
+								"6598b8ca9b844ba2abd0f6b3"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"archive a product\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0NTAzNzM1fQ.DKBEin-cxXBsP8qi4RCWqzAgl8pj3wqxqHVOPiWiRdk",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/archive-product/6598ab706ee5b3ccf66ac88e",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"archive-product",
+								"6598ab706ee5b3ccf66ac88e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"activate a product\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0Njc3OTU0fQ.OrhQIrhgiq2taS7_xZRk8Xjew2f7XB7xzcPEJQ5adqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/activate-product/6598ab706ee5b3ccf66ac88e",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"activate-product",
+								"6598ab706ee5b3ccf66ac88e"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch product in the category\"",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/fetch-products-in-category/6584e44422aa1f1a545745a8",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"fetch-products-in-category",
+								"6584e44422aa1f1a545745a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch product within price range\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"minPrice\": 50,\r\n    \"maxPrice\": 10000\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/fetch-products-price-range",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"fetch-products-price-range"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"search product by name\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productName\": \"aspire\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/products/search-product",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"products",
+								"search-product"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Categories-Request",
+			"item": [
+				{
+					"name": "POST: \"add category\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExNjAzfQ.tO7qKFL0hVf3WYe_tCB4VC5TgFZq3kSnVbzGnGfQCbU",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"x\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/categories/add-category",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"categories",
+								"add-category"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update category\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjA0MDc3fQ.csWDsIeVtqtHXI1eZrY8-p9l-ZJETWtgds5RMcH0Oes",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \r\n    \"description\": \"Step into the world of style and fashion with our diverse collection of clothing, footwear, and accessories. Discover the latest trends, timeless classics, and everything in between. Whether you're looking for casual wear, formal attire, or statement pieces, our Fashion category has something for every taste and occasion.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/categories/update-category/6584e44422aa1f1a545745a8",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"categories",
+								"update-category",
+								"6584e44422aa1f1a545745a8"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch all categories\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExODY4fQ.oHOWpoIsTEB7x2_F1xC_lfuRZSSlcokabEnfZFNJ9VM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/categories/categories-list",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"categories",
+								"categories-list"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch a specific category\"",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExODY4fQ.oHOWpoIsTEB7x2_F1xC_lfuRZSSlcokabEnfZFNJ9VM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/categories/category/6584f0ccc5f45b6dfb09723b",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"categories",
+								"category",
+								"6584f0ccc5f45b6dfb09723b"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: \"delete category\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExODY4fQ.oHOWpoIsTEB7x2_F1xC_lfuRZSSlcokabEnfZFNJ9VM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/categories/delete-category/6585044bf54e70c2a8316011",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"categories",
+								"delete-category",
+								"6585044bf54e70c2a8316011"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Users-Request",
+			"item": [
+				{
+					"name": "POST: \"registration\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"jen@gmail.com\",\r\n    \"firstName\": \"Jenny\",\r\n    \"lastName\": \"Costemiano\",\r\n    \"password\": \"123\",\r\n    \"mobileNumber\": \"09677202940\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/register",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"register"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "POST: \"login\"",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"raf@gmail.com\",\r\n    \"password\": \"123\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/login",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"login"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch user details\"",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExODY4fQ.oHOWpoIsTEB7x2_F1xC_lfuRZSSlcokabEnfZFNJ9VM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/details",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"details"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PATCH: \"verifyEmail\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OThiOWI1YTkwNGMxYWEzYzk0NmU2MyIsImVtYWlsIjoiamVuQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NTk2ODN9.KMe5vBTV_IkykBhq3XEZ-VpunmCkh24sdcIMLXnQFWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PATCH",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/verify-email",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"verify-email"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update user details\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzAzMjExODY4fQ.oHOWpoIsTEB7x2_F1xC_lfuRZSSlcokabEnfZFNJ9VM",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"email\": \"admin@gmail.com\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/update-info",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"update-info"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update user to Admin\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0Njc3OTU0fQ.OrhQIrhgiq2taS7_xZRk8Xjew2f7XB7xzcPEJQ5adqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/users/update-to-admin/6598b9b5a904c1aa3c946e63",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"users",
+								"update-to-admin",
+								"6598b9b5a904c1aa3c946e63"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Orders-Request",
+			"item": [
+				{
+					"name": "POST: \"add to cart\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1OThiOWI1YTkwNGMxYWEzYzk0NmU2MyIsImVtYWlsIjoiamVuQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NTk2ODN9.KMe5vBTV_IkykBhq3XEZ-VpunmCkh24sdcIMLXnQFWc",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"productId\": \"6598ac8f6ee5b3ccf66ac895\",\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/add-to-cart",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"add-to-cart"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"retrieve pending order\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OTIyOGUyODVmNmFiYzAxZDJjMyIsImVtYWlsIjoicmFmQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NjQ2MDd9.wzQAIKGeQOSHkUm_pRTXZ72L2TqxiH2V0fnnZEqVnWw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/pending-orders",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"pending-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"order history\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OTIyOGUyODVmNmFiYzAxZDJjMyIsImVtYWlsIjoicmFmQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NjQ2MDd9.wzQAIKGeQOSHkUm_pRTXZ72L2TqxiH2V0fnnZEqVnWw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/order-history/659b6e048366d26f8e0046c7",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"order-history",
+								"659b6e048366d26f8e0046c7"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"retrieve all orders\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0NzY2MzgyfQ.y1GdBn5U5BBhYYOJWMg_HpPjNL69aWRMBqnd53dBy-4",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/retrieve-orders",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"retrieve-orders"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update product quantity\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OTIyOGUyODVmNmFiYzAxZDJjMyIsImVtYWlsIjoicmFmQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NzA3NDl9.-mIFgINdZrP4B31itrqL8724xBzVY6_qLRbSg_s6nhs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"659cb82af17df24005932ec9\",\r\n    \"productId\": \"6598ac8f6ee5b3ccf66ac895\",\r\n    \"orderItemId\": \"659cb82ff17df24005932ed4\",\r\n    \"quantity\": 2\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/update-order-product-quantity",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"update-order-product-quantity"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "DELETE: \"delete an order item from cart\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OTIyOGUyODVmNmFiYzAxZDJjMyIsImVtYWlsIjoicmFmQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ3NzA3NDl9.-mIFgINdZrP4B31itrqL8724xBzVY6_qLRbSg_s6nhs",
+									"type": "string"
+								}
+							]
+						},
+						"method": "DELETE",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"659cb82af17df24005932ec9\",\r\n    \"productId\": \"6598ac8f6ee5b3ccf66ac895\",\r\n    \"orderItemId\": \"659cdcd9848891c17b1f8771\"\r\n\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orders/remove-product-from-cart",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orders",
+								"remove-product-from-cart"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "OrderStatus-Request",
+			"item": [
+				{
+					"name": "POST: \"add order status\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0Njc3OTU0fQ.OrhQIrhgiq2taS7_xZRk8Xjew2f7XB7xzcPEJQ5adqw",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Completed\",\r\n    \"description\": \"The entire order process, including delivery and any necessary returns or refunds, is complete.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/orderStatus/add-orderStatus",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"orderStatus",
+								"add-orderStatus"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentMethods-Request",
+			"item": [
+				{
+					"name": "POST: \"add payment method\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0ODUzMTkwfQ.XVL3d8TpdokuzbkW7g4KHI9ZUIugRptC271vqg5m0i8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\":\"Debit/Credit\",\r\n    \"description\": \"Collect card details (card number, expiry date, CVV) and process payments through a payment gateway (e.g., Stripe, Braintree).\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/paymentMethods/add-payment-method",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"paymentMethods",
+								"add-payment-method"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "PUT: \"update payment method\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0ODUzMTkwfQ.XVL3d8TpdokuzbkW7g4KHI9ZUIugRptC271vqg5m0i8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"name\": \"Debit/Credit\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/paymentMethods/update-payment-method/659dfedb7c3edf142c819dc1",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"paymentMethods",
+								"update-payment-method",
+								"659dfedb7c3edf142c819dc1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "GET: \"fetch payment methods\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0OTM5NDM5fQ.X1VZAhv_AKmS5qOU_kvm_w6g8nF6OpUXxuuRIlJeygo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/paymentMethods/payment-methods",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"paymentMethods",
+								"payment-methods"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "PaymentStatus-Request",
+			"item": [
+				{
+					"name": "POST: \"add payment status\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OGZkOGUyODVmNmFiYzAxZDJjMCIsImVtYWlsIjoiYWRtaW5AZ21haWwuY29tIiwiaXNBZG1pbiI6dHJ1ZSwiaWF0IjoxNzA0OTM5NDM5fQ.X1VZAhv_AKmS5qOU_kvm_w6g8nF6OpUXxuuRIlJeygo",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"statusName\": \"Completed\",\r\n    \"description\": \" The payment has been successfully processed and settled.\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/paymentStatus/add-payment-status",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"paymentStatus",
+								"add-payment-status"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Payment-Request",
+			"item": [
+				{
+					"name": "POST: \"add payment\"",
+					"request": {
+						"auth": {
+							"type": "bearer",
+							"bearer": [
+								{
+									"key": "token",
+									"value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6IjY1ODI3OTIyOGUyODVmNmFiYzAxZDJjMyIsImVtYWlsIjoicmFmQGdtYWlsLmNvbSIsImlzQWRtaW4iOmZhbHNlLCJpYXQiOjE3MDQ5NDIwMzl9.DONGGbNn0aK2mmfWjtMdE5axDsbRF-OGj7gOUCb68J8",
+									"type": "string"
+								}
+							]
+						},
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"orderId\": \"659cb82af17df24005932ec9\",\r\n    \"amount\": 16000,\r\n    \"paymentMethodId\": \"659dfedb7c3edf142c819dc1\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://ec2-18-222-27-62.us-east-2.compute.amazonaws.com/b3/payments/add-payment",
+							"protocol": "http",
+							"host": [
+								"ec2-18-222-27-62",
+								"us-east-2",
+								"compute",
+								"amazonaws",
+								"com"
+							],
+							"path": [
+								"b3",
+								"payments",
+								"add-payment"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}
